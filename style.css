@@ -30,6 +30,7 @@
   --fs-700: 2.074rem;
   --fs-800: 2.488rem;
   --fs-900: 2.986rem;
+  --fs-ds-title: 3.583rem;
 }
 
 /* // https://piccalil.li/blog/a-modern-css-reset */
@@ -103,10 +104,171 @@ svg {
   }
 }
 
-/* mobile: 375px; */
+/* Commen */
+.title {
+  font-weight: var(--fw-700);
+  font-size: var(--fs-ds-title);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
 /* desktop: 1440px; */
+.container {
+  background: var(--clr-neutral-400);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* -------------- newsletter style --------------  */
+.newsletter {
+  background: var(--clr-neutral-100);
+  display: flex;
+  padding: 2rem;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  width: 57%;
+}
+.newsletter-left {
+  flex-basis: 50%;
+  margin-left: 2rem;
+}
+
+.newsletter-left > p:not(:has(class)) {
+  margin-bottom: 1rem;
+}
+
+.list {
+  margin-bottom: 1rem;
+}
+.list-item {
+  display: flex;
+  align-items: flex-start;
+}
+.list > :not(:last-child) {
+  margin-bottom: 0.6rem;
+}
+.inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#input-lable {
+  font-weight: var(--fw-700);
+}
+#newsletter-input {
+  padding: 0.8rem;
+  border: 1px solid var(--clr-neutral-200);
+  border-radius: 12px;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+#newsletter-input > ::placeholder {
+  color: var(--clr-neutral-200);
+}
+.newsletter-right {
+  flex-basis: 50%;
+}
+/* .newsletter-right > img {
+  width: 80%;
+} */
+/* -------------- succsess massage style --------------  */
+.succsess {
+  background: var(--clr-neutral-100);
+  max-width: 470px;
+  padding: 3rem;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.succsess > img {
+  width: 64px;
+  margin-bottom: 1rem;
+}
+.succsess > p:not(:has(class)) {
+  margin-bottom: 1rem;
+}
+#subsciber-email {
+  font-weight: var(--fw-700);
+}
+.succsess > a {
+  margin-top: auto;
+}
+
+/* mobile: 375px; */
 @media (max-width: 375px) {
   body {
-    background-color: var(--Dark-Slate-Grey);
+    background-color: var(--clr-neutral-100);
   }
+  .newsletter {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    gap: 0;
+    padding: 0;
+  }
+  .newsletter-left {
+    padding: 1.5rem;
+    padding-top: 2rem;
+  }
+  .title {
+    margin-block: 1rem;
+    margin-bottom: 0;
+  }
+  .newsletter-left > p:not(:has(class)) {
+    margin-bottom: 1rem;
+  }
+
+  .list {
+    margin-bottom: 1rem;
+  }
+  .list-item {
+    display: flex;
+    align-items: flex-start;
+  }
+  .list > :not(:last-child) {
+    margin-bottom: 0.6rem;
+  }
+
+  .newsletter-right > img {
+    content: url("./images/illustration-sign-up-mobile.svg");
+  }
+
+  /* -------------- succsess massage style --------------  */
+  .succsess {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+  }
+  .succsess > img {
+    margin-top: auto;
+  }
+
+  .succsess > a {
+    margin-top: auto;
+  }
+  .title {
+    font-size: var(--fs-800);
+  }
+}
+
+.button {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-400);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+}
+.button:focus-visible,
+.button:hover {
+  background-color: var(--clr-primary-400);
 }

@@ -20,25 +20,40 @@
     <div class="container">
         <div class="newsletter">
             <div class="newsletter-left">
-                <p>Stay updated!</p>
+                <p class="title">Stay updated!</p>
                 <p>Join 60,000+ product managers receiving monthly updates on:</p>
-                <p><span><img src="./images/icon-list.svg" alt=""></span>Product discovery and building what matters
-                </p>
-                <p><span><img src="./images/icon-list.svg" alt=""></span>Measuring to ensure updates are a success</p>
-                <p><span><img src="./images/icon-list.svg" alt=""></span>And much more!</p>
-                <label for="newsletter-input">Email address</label>
-                <input type="email" name="email" id="newsletter-input" placeholder="email@company.com">
-                <a href="#">Subscribe to monthly newsletter</a>
+                <ul class="list" role="list">
+                    <li>
+                        <p class="list-item"><img src="./images/icon-list.svg"> &nbsp;&nbsp;&nbsp;Product discovery and
+                            building what matters
+                        </p>
+                    </li>
+                    <li>
+                        <p class="list-item"><img src="./images/icon-list.svg">&nbsp;&nbsp;&nbsp;Measuring to ensure
+                            updates
+                            are
+                            a success</p>
+                    </li>
+                    <li>
+                        <p class="list-item"><img src="./images/icon-list.svg">&nbsp;&nbsp;&nbsp;And much more!</p>
+                    </li>
+                </ul>
+                <div class="inputs">
+                    <label for="newsletter-input" id="input-lable">Email address</label>
+                    <input type="email" name="email" id="newsletter-input" placeholder="email@company.com">
+                    <a href="#" class="button">Subscribe to monthly newsletter</a>
+                </div>
             </div>
             <div class="newsletter-right">
                 <img src="./images/illustration-sign-up-desktop.svg" alt="Newsletter Sign Up">
             </div>
         </div>
-        <div class="succsess" style="display: none;">
+        <div class="succsess">
             <img src="./images/icon-success.svg">
-            <p>Thanks for subscribing!</p>
+            <p class="title">Thanks for subscribing!</p>
             <p>A confirmation email has been sent to <span id="subsciber-email">ash@loremcompany.com</span>. Please open
-                it and click the button inside to confirm your subscription. Dismiss message</p>
+                it and click the button inside to confirm your subscription.</p>
+            <a href="#" class="button">Dismiss message</a>
         </div>
 
     </div>
