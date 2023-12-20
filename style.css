@@ -111,6 +111,9 @@ svg {
   line-height: 1;
   margin-bottom: 1rem;
 }
+.hide {
+  display: none !important;
+}
 
 /* desktop: 1440px; */
 .container {
@@ -267,6 +270,7 @@ svg {
   cursor: pointer;
   padding: 1rem 2rem;
   border-radius: 12px;
+  border: none;
 }
 .button:focus-visible,
 .button:hover {

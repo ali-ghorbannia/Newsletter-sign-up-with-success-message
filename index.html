@@ -38,25 +38,28 @@
                         <p class="list-item"><img src="./images/icon-list.svg">&nbsp;&nbsp;&nbsp;And much more!</p>
                     </li>
                 </ul>
-                <div class="inputs">
-                    <label for="newsletter-input" id="input-lable">Email address</label>
-                    <input type="email" name="email" id="newsletter-input" placeholder="email@company.com">
-                    <a href="#" class="button">Subscribe to monthly newsletter</a>
+                <div>
+                    <form action="" class="inputs">
+                        <label for="newsletter-input" id="input-lable">Email address</label>
+                        <input type="email" name="email" id="newsletter-input" placeholder="email@company.com">
+                        <button class="button form-subscribe" type="submit" onclick="sendEmail()">Subscribe to monthly
+                            newsletter</button>
+                    </form>
                 </div>
             </div>
             <div class="newsletter-right">
                 <img src="./images/illustration-sign-up-desktop.svg" alt="Newsletter Sign Up">
             </div>
         </div>
-        <div class="succsess">
+        <div class="succsess hide">
             <img src="./images/icon-success.svg">
             <p class="title">Thanks for subscribing!</p>
             <p>A confirmation email has been sent to <span id="subsciber-email">ash@loremcompany.com</span>. Please open
                 it and click the button inside to confirm your subscription.</p>
-            <a href="#" class="button">Dismiss message</a>
+            <a href="#" class="button" onclick="dismiss()">Dismiss message</a>
         </div>
-
     </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
