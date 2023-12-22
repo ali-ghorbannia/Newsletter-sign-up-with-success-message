@@ -1,25 +1,12 @@
-// function sendEmail() {
-//   const email = document.getElementById("newsletter-input").value;
-
-//   document.getElementById("subsciber-email").innerHTML = email;
-//   document.querySelector(".newsletter").style.display = "none";
-//   document.querySelector(".succsess").style.display = "flex";
-// }
-
-// function dismiss() {
-//   document.querySelector(".succsess").style.display = "none";
-//   document.querySelector(".newsletter").style.display = "flex";
-// }
-
 window.onload = function () {
   // Document objects
   const content = document.getElementsByClassName("newsletter")[0];
   const subscribe = document.getElementsByClassName("form-subscribe")[0];
-  const emailError = document.getElementsByClassName("legend__error")[0];
-  const emailInput = document.getElementsByClassName("email__input")[0];
-  const notification = document.getElementsByClassName("notification")[0];
-  const userEmailDisplay = document.getElementsByClassName("user-email")[0];
-
+  const emailError = document.getElementById("error-lable");
+  const emailInput = document.getElementById("newsletter-input");
+  const notification = document.getElementsByClassName("succsess")[0];
+  const userEmailDisplay = document.getElementById("subsciber-email");
+  const closeNotification = document.getElementById("close-succsess");
   // Handlers
   const isValidEmail = (email) =>
     /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(email);
@@ -31,10 +18,15 @@ window.onload = function () {
   };
 
   const showEmailError = () => {
-    emailError.classList.add("inline-block");
-    emailInput.classList.add("input--error");
+    emailError.classList.remove("hide");
+    emailInput.classList.add("error");
   };
-
+  const closeNotificationForm = () => {
+    notification.classList.add("hide");
+    content.classList.remove("hide");
+    emailInput.classList.remove("error");
+    emailError.classList.add("hide");
+  };
   // Events
   subscribe.addEventListener("click", (e) => {
     e.preventDefault();
@@ -43,5 +35,9 @@ window.onload = function () {
       return;
     }
     showNotificationSuccess();
+  });
+  closeNotification.addEventListener("click", (e) => {
+    e.preventDefault();
+    closeNotificationForm();
   });
 };

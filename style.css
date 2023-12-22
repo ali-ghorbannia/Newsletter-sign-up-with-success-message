@@ -1,17 +1,18 @@
 :root {
   /* -------------- colors --------------  */
-  --Tomato: hsl(4, 100%, 67%);
-  --Dark-Slate-Grey: hsl(234, 29%, 20%);
-  --Charcoal-Grey: hsl(235, 18%, 26%);
-  --Grey: hsl(231, 7%, 60%);
-  --White: hsl(0, 0%, 100%);
+  --Tomato: 4, 100%, 67%;
+  --Dark-Slate-Grey: 234, 29%, 20%;
+  --Charcoal-Grey: 235, 18%, 26%;
+  --Grey: 231, 7%, 60%;
+  --White: 0, 0%, 100%;
 
-  --clr-primary-400: var(--Tomato);
+  --clr-primary-100: hsla(var(--Tomato), 0.4);
+  --clr-primary-400: hsl(var(--Tomato));
 
-  --clr-neutral-100: var(--White);
-  --clr-neutral-200: var(--Grey);
-  --clr-neutral-300: var(--Charcoal-Grey);
-  --clr-neutral-400: var(--Dark-Slate-Grey);
+  --clr-neutral-100: hsl(var(--White));
+  --clr-neutral-200: hsl(var(--Grey));
+  --clr-neutral-300: hsl(var(--Charcoal-Grey));
+  --clr-neutral-400: hsl(var(--Dark-Slate-Grey));
 
   /* -------------- font family --------------  */
   --ff-primary: "Roboto", sans-serif;
@@ -114,7 +115,11 @@ svg {
 .hide {
   display: none !important;
 }
-
+.error {
+  background-color: var(--clr-primary-100);
+  border-color: var(--clr-primary-400);
+  color: var(--clr-primary-400);
+}
 /* desktop: 1440px; */
 .container {
   background: var(--clr-neutral-400);
@@ -159,8 +164,19 @@ svg {
   display: flex;
   flex-direction: column;
 }
+.inputs-labels-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 #input-lable {
   font-weight: var(--fw-700);
+  font-size: var(--fs-200);
+}
+#error-lable {
+  font-size: var(--fs-200);
+  font-weight: var(--fw-700);
+  color: var(--clr-primary-400);
 }
 #newsletter-input {
   padding: 0.8rem;
@@ -176,9 +192,7 @@ svg {
 .newsletter-right {
   flex-basis: 50%;
 }
-/* .newsletter-right > img {
-  width: 80%;
-} */
+
 /* -------------- succsess massage style --------------  */
 .succsess {
   background: var(--clr-neutral-100);

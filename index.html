@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor]">
     <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
     <title>Newsletter</title>
     <!-- ------------------------ google font ------------------------ -->
@@ -40,23 +42,27 @@
                 </ul>
                 <div>
                     <form action="" class="inputs">
-                        <label for="newsletter-input" id="input-lable">Email address</label>
-                        <input type="email" name="email" id="newsletter-input" placeholder="email@company.com">
-                        <button class="button form-subscribe" type="submit" onclick="sendEmail()">Subscribe to monthly
+                        <div class="inputs-labels-container">
+                            <label for="newsletter-input" id="input-lable">Email address</label>
+                            <label for="newsletter-input" class="hide" id="error-lable">Valid email required</label>
+                        </div>
+                        <input type="email" name="email" id="newsletter-input" class="" placeholder="email@company.com">
+                        <button class="button form-subscribe" type="submit">Subscribe to monthly
                             newsletter</button>
                     </form>
                 </div>
             </div>
-            <div class="newsletter-right">
+            <div class=" newsletter-right">
                 <img src="./images/illustration-sign-up-desktop.svg" alt="Newsletter Sign Up">
             </div>
         </div>
         <div class="succsess hide">
             <img src="./images/icon-success.svg">
             <p class="title">Thanks for subscribing!</p>
-            <p>A confirmation email has been sent to <span id="subsciber-email">ash@loremcompany.com</span>. Please open
+            <p>A confirmation email has been sent to <span id="subsciber-email">ash@loremcompany.com</span>. Please
+                open
                 it and click the button inside to confirm your subscription.</p>
-            <a href="#" class="button" onclick="dismiss()">Dismiss message</a>
+            <a href="#" class="button" id="close-succsess">Dismiss message</a>
         </div>
     </div>
     <script src="main.js"></script>
