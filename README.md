@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
-- Live Site URL: [Vercal](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/ali-ghorbannia/Newsletter-sign-up-with-success-message)
+- Live Site URL: [Vercel]([https://your-live-site-url.com](https://newsletter-sign-up-with-success-message-two.vercel.app/))
 
 ## My process
 
